@@ -106,7 +106,7 @@ alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias l='ls -al'
 alias qfind="find . -name "
-alias myip='dig +short myip.opendns.com @resolver1.opendns.com'         # myip:         Public facing IP Address
+alias myip='curl https://ipinfo.io/ip'
 alias netCons='lsof -i'                                                 # netCons:      Show all open TCP/IP sockets
 alias flushDNS='dscacheutil -flushcache'                                # flushDNS:     Flush out the DNS Cache
 alias lsock='sudo /usr/sbin/lsof -i -P'                                 # lsock:        Display open sockets
@@ -117,8 +117,6 @@ alias ipInfo1='ipconfig getpacket en1'                                  # ipInfo
 alias openPorts='sudo lsof -i | grep LISTEN'                            # openPorts:    All listening connections
 alias showBlocked='sudo ipfw list'                                      # showBlocked:  All ipfw rules inc/ blocked IPs
 alias s='git status'                                                    
-alias ssh5545='ssh -p2016 admin@10.89.21.119'
-alias imssh='ssh -p31 jarhanco@ast0109-pod.cisco.com'   # ssh to ims host
 alias gco='git checkout'
 alias vi='nvim'
 alias vim='nvim'
@@ -128,8 +126,6 @@ alias updatedb="/usr/libexec/locate.updatedb"
 alias memHogsTop='top -l 1 -o rsize | head -20'
 alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
 alias cpuHogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
-alias neo4j='${NEO4J_HOME}/bin/neo4j'
-
 
 
 PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
@@ -156,14 +152,4 @@ export GRADLE_HOME="/usr/local/bin/gradle"
 export PATH="${GRADLE_HOME}/bin:$PATH"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-export NEO4J_HOME="/Users/jarhanco/Documents/neo4j-community-3.2.0/"
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jarhanco/libs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jarhanco/libs/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/jarhanco/libs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jarhanco/libs/google-cloud-sdk/completion.zsh.inc'; fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/jarhanco/.sdkman"
-[[ -s "/Users/jarhanco/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jarhanco/.sdkman/bin/sdkman-init.sh"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
